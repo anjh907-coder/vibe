@@ -187,6 +187,46 @@ export const TabMenu3Deployment: React.FC<TabMenu3DeploymentProps> = ({ onCopyTe
             {aiSafeEnvPrompt}
           </pre>
         </div>
+
+        {/* Beginner FAQ: Deploy from a branch vs GitHub Actions */}
+        <div className="p-5 rounded-2xl bg-amber-50/80 border border-amber-300 space-y-3">
+          <div className="flex items-center gap-2">
+            <span className="text-xl">💡</span>
+            <h4 className="font-extrabold text-sm sm:text-base text-stone-900">
+              초보자 궁금증: "Deploy from a branch"와 "GitHub Actions"는 무엇이 다른가요?
+            </h4>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs leading-relaxed">
+            <div className="p-3.5 bg-white rounded-xl border border-amber-200">
+              <span className="font-bold text-rose-700 block mb-1">
+                ❌ Deploy from a branch (날재료 그대로 내놓기)
+              </span>
+              <p className="text-stone-600 mb-2">
+                저장소에 올려둔 원본 파일(TypeScript <code className="text-stone-800 bg-stone-100 px-1 py-0.5 rounded font-mono">.tsx</code>)을 아무런 가공 없이 웹 브라우저에 그대로 던져줍니다.
+              </p>
+              <div className="p-2 bg-rose-50 rounded-lg text-rose-900 text-[11px]">
+                <strong>왜 하얀 화면이 뜰까요?</strong> 브라우저(크롬 등)는 날달걀(TypeScript)을 직접 소화하지 못합니다. 반드시 오븐에 구워진 빵(순수 <code className="font-mono">.js</code>)만 먹을 수 있기 때문에 404나 문법 오류가 납니다.
+              </div>
+            </div>
+
+            <div className="p-3.5 bg-white rounded-xl border border-amber-200">
+              <span className="font-bold text-emerald-700 block mb-1">
+                ✅ GitHub Actions (주방장이 구워서 내놓기)
+              </span>
+              <p className="text-stone-600 mb-2">
+                코드를 올릴 때마다 깃허브의 로봇 주방장(클라우드 가상 컴퓨터)이 켜져서 <code className="text-stone-800 bg-stone-100 px-1 py-0.5 rounded font-mono">npm run build</code> 명령어를 대신 실행해 줍니다.
+              </p>
+              <div className="p-2 bg-emerald-50 rounded-lg text-emerald-900 text-[11px]">
+                <strong>해결 원리:</strong> <code className="font-mono">.tsx</code>를 브라우저가 읽을 수 있는 순수한 <code className="font-mono">.js</code>와 <code className="font-mono">.html</code>로 완벽하게 요리한 <strong>결과물(dist 폴더)</strong>만 쏙 뽑아서 웹사이트로 띄워줍니다!
+              </div>
+            </div>
+          </div>
+
+          <div className="p-3 bg-white/80 rounded-xl border border-amber-200 text-xs text-stone-700">
+            <strong>🌟 그래서 가이드북에서 Vercel을 가장 추천하는 이유:</strong> GitHub Actions는 요리법 파일(<code className="font-mono">.github/workflows/deploy.yml</code>)을 직접 넣어줘야 하지만, <strong>Vercel</strong>은 저장소만 연결하면 주방장이 알아서 1초 만에 척척 구워주기 때문입니다!
+          </div>
+        </div>
       </section>
 
       {/* STEP 2: Vercel 가입 및 GitHub 연결 */}
