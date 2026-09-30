@@ -2,5 +2,7 @@
   "name": "AI 웹앱 & 데이터베이스 입문 가이드",
   "description": "코딩 없이 AI로 웹앱 만들기, 데이터베이스(시트 vs 파이어베이스) 선택, GitHub와 Vercel을 통한 안전한 무료 배포까지 초보자를 위한 바이브 코딩 실전 가이드",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
